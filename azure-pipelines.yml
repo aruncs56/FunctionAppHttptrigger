@@ -14,5 +14,5 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration) 
-          workspace:FunctionAppHttptrigger   
+          workingDirectory:FunctionAppHttptrigger
   displayName: 'dotnet build $(buildConfiguration)'

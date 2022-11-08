@@ -19,3 +19,12 @@ steps:
 
 - script: dotnet publish --configuration $(buildConfiguration) 
   displayName: 'dotnet publish $(buildConfiguration)'
+
+- task: ArchiveFiles@2
+  inputs:
+   rootFolderOrFile: 'FunctionAppHttptrigger/bin/Release/net6.0/publish'
+   includeRootFolder: false
+   archiveType: zip
+   archiveFile: '$(Build.ArtifactStagingDirectory)/FunctionAppHttptrigger/$(Build.BuildId).zip'
+   replaceExistingArchive: true 
+  displayName: 'FunctionAppHttptrigger zip files'  

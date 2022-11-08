@@ -28,3 +28,9 @@ steps:
    archiveFile: '$(Build.ArtifactStagingDirectory)/FunctionAppHttptrigger/$(Build.BuildId).zip'
    replaceExistingArchive: true 
   displayName: 'FunctionAppHttptrigger zip files'  
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/FunctionAppHttptrigger'
+    artifactName: 'FunctionAppHttptrigger'
+  displayName: 'FunctionAppHttptrigger publish to pipeline'

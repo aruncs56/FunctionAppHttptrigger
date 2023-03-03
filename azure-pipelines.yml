@@ -7,9 +7,9 @@ trigger:
 - master
 
 pool:
-   name: az400m05l05a-pool
+   name: Default
  demands:
- - agent.name -equals DESKTOP-MN5GRV4
+   - agent.name -equals DESKTOP-MN5GRV4  
 
 variables:
   buildConfiguration: 'Release'

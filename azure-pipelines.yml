@@ -7,9 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'az400m05l05a-pool' 
-  demands: 
-    - agent.name -equals DESKTOP-MN5GRV4
+  vmImage: ubuntu-latest
 
 variables:
   buildConfiguration: 'Release'
